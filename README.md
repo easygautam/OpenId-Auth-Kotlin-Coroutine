@@ -1,2 +1,7 @@
-# OpenId-Auth-Kotlin-Coroutine
-This project is a implementation of the OpenId Auth in Kotlin using coroutine to make result synchronized  
+# What is it?
+OpenId Auth provides callback feature to get result of any action.
+I done all the results in synchronous way.
+
+
+
+
