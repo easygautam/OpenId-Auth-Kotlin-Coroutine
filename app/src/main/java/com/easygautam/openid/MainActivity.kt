@@ -55,15 +55,23 @@ class MainActivity : AppCompatActivity() {
     private suspend fun doAuth() {
         openIdAuth.doAuthorization()
             .let {
+                hideProgress()
                 when (it) {
                     is AuthResult.Success -> {
-                        // Authentication Success
+                        // Detail of authentication
+                        authenticatedUi(it.authState)
                     }
                     is AuthResult.Cancel -> {
                         // Authentication canceled
+                        Toast.makeText(this, "Authentication canceled", Toast.LENGTH_SHORT).show()
                     }
                     is AuthResult.Failed -> {
                         // Authentication failed
+                        Toast.makeText(
+                            this,
+                            it.message ?: "Authentication failed",
+                            Toast.LENGTH_SHORT
+                        ).show()
                     }
                 }
 
