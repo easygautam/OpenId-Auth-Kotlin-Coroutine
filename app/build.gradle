@@ -8,14 +8,14 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.facomsa.rayopenauth"
+        applicationId "com.easygautam.openid"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
         // place correct redirectScheme~
-         manifestPlaceholders = [appAuthRedirectScheme: 'com.facomsa.rayopenauth']
+         manifestPlaceholders = [appAuthRedirectScheme: 'com.easygautam.openid']
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
